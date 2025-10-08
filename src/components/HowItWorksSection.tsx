@@ -47,8 +47,8 @@ const HowItWorksSection = () => {
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="relative mb-6">
-                    <div className="w-32 h-32 bg-gradient-hero rounded-2xl flex items-center justify-center shadow-medium relative z-10">
-                      <step.icon className="h-14 w-14 text-primary-foreground" />
+                    <div className="w-32 h-32 bg-primary rounded-2xl flex items-center justify-center shadow-medium relative z-10">
+                      <step.icon className="h-14 w-14 text-white" />
                     </div>
                     <div className="absolute -top-2 -right-2 w-10 h-10 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-lg shadow-soft z-20">
                       {step.number}

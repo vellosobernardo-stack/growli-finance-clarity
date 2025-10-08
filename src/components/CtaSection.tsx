@@ -10,19 +10,19 @@ const CtaSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-hero relative overflow-hidden">
+    <section className="py-24 bg-primary relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="absolute top-10 left-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-primary-glow/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Pronto para entender as finanças
-            <span className="block text-secondary-light mt-2">do seu negócio?</span>
+            <span className="block text-white/90 mt-2">do seu negócio?</span>
           </h2>
           
-          <p className="text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
             Comece sua análise financeira gratuita agora e descubra oportunidades de crescimento que você nem sabia que existiam.
           </p>
 
@@ -30,10 +30,10 @@ const CtaSection = () => {
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="flex items-center gap-3 text-primary-foreground/90 animate-fade-in-up"
+                className="flex items-center gap-3 text-white/90 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CheckCircle2 className="h-5 w-5 text-secondary-light flex-shrink-0" />
+                <CheckCircle2 className="h-5 w-5 text-white flex-shrink-0" />
                 <span className="text-left">{feature}</span>
               </div>
             ))}
@@ -49,7 +49,7 @@ const CtaSection = () => {
             </Button>
           </div>
 
-          <p className="text-sm text-primary-foreground/70">
+          <p className="text-sm text-white/80">
             Junte-se a mais de 500 empresas que já transformaram suas finanças
           </p>
         </div>

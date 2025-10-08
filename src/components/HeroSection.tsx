@@ -11,6 +11,10 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+          <div className="mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-2">Growli</h2>
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
             Entenda as finanças da sua empresa
             <span className="block text-primary mt-2">sem complicação</span>
