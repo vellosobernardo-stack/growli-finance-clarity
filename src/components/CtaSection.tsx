@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CtaSection = () => {
   const features = [
@@ -40,13 +41,15 @@ const CtaSection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-accent-hover text-accent-foreground font-semibold px-10 py-6 text-lg shadow-strong transition-all duration-300 hover:scale-105"
-            >
-              Começar análise agora
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/analise-financeira">
+              <Button 
+                size="lg" 
+                className="bg-accent hover:bg-accent-hover text-accent-foreground font-semibold px-10 py-6 text-lg shadow-strong transition-all duration-300 hover:scale-105"
+              >
+                Começar análise agora
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
 
           <p className="text-sm text-white/80">
