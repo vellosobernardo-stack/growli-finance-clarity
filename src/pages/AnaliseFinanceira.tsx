@@ -105,21 +105,21 @@ const AnaliseFinanceira = () => {
               {/* Title */}
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-foreground mb-2">
-                  Nível 1: Análise Básica
+                  Análise Básica
                 </h2>
                 <p className="text-muted-foreground">
                   Preencha as informações essenciais para começar sua análise financeira
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-12">
                 {/* Informações Gerais */}
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <FileText className="h-4 w-4 text-primary" />
+                <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <FileText className="h-5 w-5 text-primary" />
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground">
+                    <h3 className="text-xl font-semibold text-foreground">
                       Informações Gerais
                     </h3>
                   </div>
@@ -204,12 +204,12 @@ const AnaliseFinanceira = () => {
                 </div>
 
                 {/* Receitas e Custos */}
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
-                      <Flame className="h-4 w-4 text-accent" />
+                <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Flame className="h-5 w-5 text-accent" />
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground">
+                    <h3 className="text-xl font-semibold text-foreground">
                       Receitas e Custos
                     </h3>
                   </div>
@@ -260,12 +260,12 @@ const AnaliseFinanceira = () => {
                 </div>
 
                 {/* Disponibilidades */}
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center">
-                      <Wallet className="h-4 w-4 text-secondary" />
+                <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                      <Wallet className="h-5 w-5 text-secondary" />
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground">
+                    <h3 className="text-xl font-semibold text-foreground">
                       Disponibilidades
                     </h3>
                   </div>
@@ -302,12 +302,12 @@ const AnaliseFinanceira = () => {
                 </div>
 
                 {/* Contas a Receber e Pagar */}
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <BarChart3 className="h-4 w-4 text-primary" />
+                <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <BarChart3 className="h-5 w-5 text-primary" />
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground">
+                    <h3 className="text-xl font-semibold text-foreground">
                       Contas a Receber e Pagar (30 dias)
                     </h3>
                   </div>
