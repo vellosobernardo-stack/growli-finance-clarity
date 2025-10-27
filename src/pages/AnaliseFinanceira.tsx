@@ -10,12 +10,13 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, TrendingUp, FileText, Flame, Wallet, BarChart3 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const AnaliseFinanceira = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -26,11 +27,14 @@ const AnaliseFinanceira = () => {
     await new Promise(resolve => setTimeout(resolve, 1500));
     
     toast({
-      title: "Análise iniciada!",
-      description: "Estamos processando seus dados financeiros.",
+      title: "Análise concluída!",
+      description: "Redirecionando para os resultados...",
     });
     
-    setIsSubmitting(false);
+    // Redirecionar para a página de resultado após um breve delay
+    setTimeout(() => {
+      navigate("/resultado-analise");
+    }, 500);
   };
 
   return (
