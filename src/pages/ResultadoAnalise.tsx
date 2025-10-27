@@ -90,24 +90,24 @@ const ResultadoAnalise = () => {
           </div>
 
           {/* Visão Básica */}
-          <Card className="border-primary/20 shadow-lg animate-fade-in">
+          <Card className="border-primary/20 shadow-xl animate-fade-in bg-gradient-to-br from-card via-card to-primary/5">
             <CardHeader className="pb-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <FileText className="h-5 w-5 text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <FileText className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <CardTitle className="text-xl">Visão Básica</CardTitle>
-                  <CardDescription className="mt-1">Principais indicadores do período analisado</CardDescription>
+                  <CardTitle className="text-2xl">Visão Básica</CardTitle>
+                  <CardDescription className="mt-1 text-base">Principais indicadores do período analisado</CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-muted-foreground leading-relaxed">
-                A sua análise indica que a empresa está com um bom equilíbrio financeiro. 
-                O resultado operacional de <span className="font-semibold text-foreground">R$ 10.000,00</span> demonstra 
-                capacidade de geração de caixa, e a margem de <span className="font-semibold text-foreground">35%</span> está 
-                dentro de patamares saudáveis para o setor. Com uma liquidez corrente de <span className="font-semibold text-foreground">2,5</span>, 
+              <p className="text-base leading-relaxed text-foreground">
+                A sua análise indica que a empresa está com um <span className="font-bold text-primary text-lg">bom equilíbrio financeiro</span>. 
+                O resultado operacional de <span className="font-bold text-emerald-600 dark:text-emerald-400 text-lg">R$ 10.000,00</span> demonstra 
+                capacidade de geração de caixa, e a margem de <span className="font-bold text-primary text-lg">35%</span> está 
+                dentro de patamares saudáveis para o setor. Com uma liquidez corrente de <span className="font-bold text-blue-600 dark:text-blue-400 text-lg">2,5</span>, 
                 a empresa tem boa capacidade de honrar suas obrigações de curto prazo.
               </p>
             </CardContent>
