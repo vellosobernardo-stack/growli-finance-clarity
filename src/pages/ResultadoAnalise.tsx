@@ -256,12 +256,14 @@ const ResultadoAnalise = () => {
                     de tudo com o <span className="font-bold">Nível 3</span>!
                   </p>
                 </div>
-                <Button 
-                  size="lg" 
-                  className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
-                >
-                  Avançar para Nível 2
-                </Button>
+                <Link to="/analise-intermediaria">
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                  >
+                    Avançar para Nível 2
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
