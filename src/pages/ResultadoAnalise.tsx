@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, TrendingUp, TrendingDown, Calendar, DollarSign, Wallet, FileText, BarChart3, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, TrendingUp, TrendingDown, Calendar, DollarSign, Wallet, FileText, BarChart3, Sparkles, CheckCircle2, Flame } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Progress } from "@/components/ui/progress";
 
@@ -24,13 +24,13 @@ const ResultadoAnalise = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+    <div className="min-h-screen bg-gradient-hero">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+      <header className="border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group">
-              <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
+            <Link to="/" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+              <ArrowLeft className="h-5 w-5" />
               <span className="font-semibold">Voltar</span>
             </Link>
             <div className="flex items-center gap-2">
@@ -42,174 +42,199 @@ const ResultadoAnalise = () => {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="max-w-6xl mx-auto space-y-8">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-5xl mx-auto space-y-8">
           
           {/* Hero Section */}
-          <div className="text-center space-y-4 animate-fade-in">
+          <div className="text-center mb-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4">
               <Sparkles className="h-4 w-4 text-primary" />
               <span className="text-sm font-medium text-primary">Análise Concluída</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-bold text-foreground tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-3">
               Análise Financeira Growli
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground">
               Transforme dados em decisões estratégicas
             </p>
           </div>
 
           {/* Stepper */}
-          <div className="flex items-center justify-center animate-scale-in">
-            <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center justify-center mb-12 animate-scale-in">
+            <div className="flex items-center gap-4">
               <div className="flex flex-col items-center gap-2">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg ring-4 ring-primary/20">
-                  <CheckCircle2 className="h-5 w-5 sm:h-6 sm:w-6" />
+                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg shadow-elegant">
+                  <CheckCircle2 className="h-6 w-6" />
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-primary">Básico</span>
+                <span className="text-sm font-medium text-primary">Básico</span>
               </div>
               
-              <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary to-muted rounded-full"></div>
+              <div className="w-20 h-1 bg-border rounded-full"></div>
               
               <div className="flex flex-col items-center gap-2">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-muted text-muted-foreground flex items-center justify-center font-bold text-base sm:text-lg">
+                <div className="w-12 h-12 rounded-full bg-muted text-muted-foreground flex items-center justify-center font-bold text-lg">
                   2
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Intermediário</span>
+                <span className="text-sm font-medium text-muted-foreground">Intermediário</span>
               </div>
               
-              <div className="w-16 sm:w-20 h-1 bg-muted rounded-full"></div>
+              <div className="w-20 h-1 bg-border rounded-full"></div>
               
               <div className="flex flex-col items-center gap-2">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-muted text-muted-foreground flex items-center justify-center font-bold text-base sm:text-lg">
+                <div className="w-12 h-12 rounded-full bg-muted text-muted-foreground flex items-center justify-center font-bold text-lg">
                   3
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-muted-foreground">Avançado</span>
+                <span className="text-sm font-medium text-muted-foreground">Avançado</span>
               </div>
             </div>
           </div>
 
           {/* Visão Básica */}
-          <Card className="border-primary/20 shadow-xl animate-fade-in bg-gradient-to-br from-card via-card to-primary/5">
-            <CardHeader className="pb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <FileText className="h-6 w-6 text-primary" />
+          <Card className="shadow-elegant animate-fade-in border-border/50">
+            <CardContent className="pt-8 pb-8">
+              <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <FileText className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    Visão Básica
+                  </h3>
                 </div>
-                <div>
-                  <CardTitle className="text-2xl">Visão Básica</CardTitle>
-                  <CardDescription className="mt-1 text-base">Principais indicadores do período analisado</CardDescription>
-                </div>
+                <p className="text-base leading-relaxed text-foreground">
+                  A sua análise indica que a empresa está com um <span className="font-bold text-primary text-lg">bom equilíbrio financeiro</span>. 
+                  O resultado operacional de <span className="font-bold text-emerald-600 dark:text-emerald-400 text-lg">R$ 10.000,00</span> demonstra 
+                  capacidade de geração de caixa, e a margem de <span className="font-bold text-primary text-lg">35%</span> está 
+                  dentro de patamares saudáveis para o setor. Com uma liquidez corrente de <span className="font-bold text-blue-600 dark:text-blue-400 text-lg">2,5</span>, 
+                  a empresa tem boa capacidade de honrar suas obrigações de curto prazo.
+                </p>
               </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-base leading-relaxed text-foreground">
-                A sua análise indica que a empresa está com um <span className="font-bold text-primary text-lg">bom equilíbrio financeiro</span>. 
-                O resultado operacional de <span className="font-bold text-emerald-600 dark:text-emerald-400 text-lg">R$ 10.000,00</span> demonstra 
-                capacidade de geração de caixa, e a margem de <span className="font-bold text-primary text-lg">35%</span> está 
-                dentro de patamares saudáveis para o setor. Com uma liquidez corrente de <span className="font-bold text-blue-600 dark:text-blue-400 text-lg">2,5</span>, 
-                a empresa tem boa capacidade de honrar suas obrigações de curto prazo.
-              </p>
             </CardContent>
           </Card>
 
           {/* Indicadores-chave */}
-          <div className="space-y-4 animate-fade-in">
-            <h2 className="text-2xl font-bold text-foreground">Indicadores-chave do seu mês</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {indicators.map((indicator, index) => (
-                <Card key={index} className={`${indicator.bgColor} border-0 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className={`w-12 h-12 rounded-xl ${indicator.bgColor} flex items-center justify-center shadow-sm border border-border/50`}>
-                        <indicator.icon className={`h-6 w-6 ${indicator.color}`} />
+          <Card className="shadow-elegant animate-fade-in border-border/50">
+            <CardContent className="pt-8 pb-8">
+              <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <BarChart3 className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    Indicadores-chave do seu mês
+                  </h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {indicators.map((indicator, index) => (
+                    <div key={index} className={`p-6 rounded-lg ${indicator.bgColor} border border-border/50 hover:shadow-md transition-all`}>
+                      <div className="flex items-start justify-between mb-4">
+                        <div className={`w-10 h-10 rounded-lg ${indicator.bgColor} flex items-center justify-center border border-border/50`}>
+                          <indicator.icon className={`h-5 w-5 ${indicator.color}`} />
+                        </div>
                       </div>
+                      <p className="text-sm font-medium text-muted-foreground mb-2">{indicator.label}</p>
+                      <p className={`text-2xl font-bold ${indicator.color}`}>
+                        {indicator.value}
+                        {indicator.unit && <span className="text-lg ml-1">{indicator.unit}</span>}
+                      </p>
                     </div>
-                    <p className="text-sm font-medium text-muted-foreground mb-2">{indicator.label}</p>
-                    <p className={`text-2xl font-bold ${indicator.color}`}>
-                      {indicator.value}
-                      {indicator.unit && <span className="text-lg ml-1">{indicator.unit}</span>}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Gráfico de Composição */}
-          <Card className="shadow-lg animate-fade-in">
-            <CardHeader>
-              <CardTitle className="text-xl">Composição do Mês</CardTitle>
-              <CardDescription>Distribuição das suas receitas e despesas</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="font-medium text-foreground">Receita Bruta</span>
-                    <span className="font-semibold text-emerald-600 dark:text-emerald-400">R$ 400.800,00</span>
-                  </div>
-                  <Progress value={100} className="h-12 bg-muted" />
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="font-medium text-foreground">Custos Diretos</span>
-                    <span className="font-semibold text-orange-600 dark:text-orange-400">R$ 85.000,00</span>
-                  </div>
-                  <Progress value={45} className="h-12 bg-muted" />
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="font-medium text-foreground">Despesas Fixas</span>
-                    <span className="font-semibold text-blue-600 dark:text-blue-400">R$ 240.000,00</span>
-                  </div>
-                  <Progress value={30} className="h-12 bg-muted" />
+                  ))}
                 </div>
               </div>
-              
-              <p className="text-sm text-muted-foreground italic border-l-4 border-primary pl-4 py-2 bg-muted/30 rounded-r">
-                Total de <span className="font-semibold text-foreground">R$ (R$ 400.800,00)</span>
-              </p>
+            </CardContent>
+          </Card>
+
+          {/* Gráfico de Composição */}
+          <Card className="shadow-elegant animate-fade-in border-border/50">
+            <CardContent className="pt-8 pb-8">
+              <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                    <Flame className="h-5 w-5 text-accent" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    Composição do Mês
+                  </h3>
+                </div>
+                <p className="text-muted-foreground mb-6">Distribuição das suas receitas e despesas</p>
+                <div className="space-y-6">
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="font-medium text-foreground">Receita Bruta</span>
+                        <span className="font-semibold text-emerald-600 dark:text-emerald-400">R$ 400.800,00</span>
+                      </div>
+                      <Progress value={100} className="h-12 bg-muted" />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="font-medium text-foreground">Custos Diretos</span>
+                        <span className="font-semibold text-orange-600 dark:text-orange-400">R$ 85.000,00</span>
+                      </div>
+                      <Progress value={45} className="h-12 bg-muted" />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="font-medium text-foreground">Despesas Fixas</span>
+                        <span className="font-semibold text-blue-600 dark:text-blue-400">R$ 240.000,00</span>
+                      </div>
+                      <Progress value={30} className="h-12 bg-muted" />
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm text-muted-foreground italic border-l-4 border-primary pl-4 py-2 bg-muted/30 rounded-r">
+                    Total de <span className="font-semibold text-foreground">R$ (R$ 400.800,00)</span>
+                  </p>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
           {/* Interpretação */}
-          <Card className="border-l-4 border-l-primary shadow-lg animate-fade-in">
-            <CardHeader>
-              <CardTitle className="text-xl flex items-center gap-2">
-                <BarChart3 className="h-5 w-5 text-primary" />
-                Como interpretar seu gráfico
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground leading-relaxed">
-                Este gráfico mostra a composição do seu resultado no mês. A receita bruta representa o total de vendas ou serviços prestados. 
-                Os custos diretos são variáveis e vinculados ao volume vendido (materiais, comissões, impostos sobre vendas etc.). 
-                As despesas fixas são os gastos mensais que você tem mesmo sem vender nada (aluguel, salários, etc.). 
-                A diferença entre esses itens indica o quanto a empresa está gerando ou consumindo de caixa no período analisado.
-              </p>
+          <Card className="shadow-elegant animate-fade-in border-border/50">
+            <CardContent className="pt-8 pb-8">
+              <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                    <Wallet className="h-5 w-5 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    Como interpretar seu gráfico
+                  </h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Este gráfico mostra a composição do seu resultado no mês. A receita bruta representa o total de vendas ou serviços prestados. 
+                  Os custos diretos são variáveis e vinculados ao volume vendido (materiais, comissões, impostos sobre vendas etc.). 
+                  As despesas fixas são os gastos mensais que você tem mesmo sem vender nada (aluguel, salários, etc.). 
+                  A diferença entre esses itens indica o quanto a empresa está gerando ou consumindo de caixa no período analisado.
+                </p>
+              </div>
             </CardContent>
           </Card>
 
           {/* Resumo Financeiro */}
-          <Card className="shadow-xl animate-fade-in border-2">
-            <CardHeader className="bg-gradient-to-br from-primary/5 to-transparent">
-              <CardTitle className="text-2xl flex items-center gap-2">
-                <TrendingUp className="h-6 w-6 text-primary" />
-                Resumo Financeiro
-              </CardTitle>
-              <CardDescription>Consolidação dos valores informados</CardDescription>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <div className="space-y-3">
-                {resumoFinanceiro.map((item, index) => (
-                  <div key={index} className="flex items-center justify-between py-3 border-b border-border/50 last:border-0 hover:bg-muted/30 px-4 -mx-4 rounded transition-colors">
-                    <span className="font-medium text-foreground">{item.item}</span>
-                    <span className="font-semibold text-lg">{item.valor}</span>
+          <Card className="shadow-elegant animate-fade-in border-border/50">
+            <CardContent className="pt-8 pb-8">
+              <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <TrendingUp className="h-5 w-5 text-primary" />
                   </div>
-                ))}
+                  <h3 className="text-xl font-semibold text-foreground">
+                    Resumo Financeiro
+                  </h3>
+                </div>
+                <p className="text-muted-foreground mb-6">Consolidação dos valores informados</p>
+                <div className="space-y-3">
+                  {resumoFinanceiro.map((item, index) => (
+                    <div key={index} className="flex items-center justify-between py-3 border-b border-border/50 last:border-0 hover:bg-muted/30 px-4 -mx-4 rounded transition-colors">
+                      <span className="font-medium text-foreground">{item.item}</span>
+                      <span className="font-semibold text-lg">{item.valor}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </CardContent>
           </Card>
