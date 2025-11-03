@@ -26,7 +26,7 @@ const AnaliseIntermediaria = () => {
     
     // Redirecionar para a página de resultado após um breve delay
     setTimeout(() => {
-      navigate("/resultado-analise");
+      navigate("/resultado-analise-nivel2");
     }, 500);
   };
 
