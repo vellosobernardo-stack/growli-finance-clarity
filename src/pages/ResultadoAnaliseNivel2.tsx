@@ -93,57 +93,77 @@ const ResultadoAnaliseNivel2 = () => {
 
           {/* Key Metrics */}
           <Card className="shadow-elegant animate-fade-in border-border/50 mb-6">
-            <CardContent className="pt-6 pb-6">
-              <div className="bg-muted/30 border border-border/50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold text-foreground mb-6">Indicadores-chave</h3>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            <CardContent className="pt-8 pb-8">
+              <div className="space-y-4 p-6 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <TrendingUp className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    Indicadores-chave do Nível 2
+                  </h3>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {/* Giro Receitas */}
-                  <div className="bg-background/50 p-4 rounded-lg border border-border/30">
-                    <div className="flex items-center gap-2 mb-2">
-                      <TrendingUp className="h-4 w-4 text-blue-600" />
-                      <p className="text-xs text-muted-foreground">Giro Receitas</p>
+                  <div className="p-6 rounded-lg bg-blue-50 dark:bg-blue-950/30 border border-border/50 hover:shadow-md transition-all">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-950/30 flex items-center justify-center border border-border/50">
+                        <TrendingUp className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                      </div>
                     </div>
-                    <p className="text-2xl font-bold text-foreground">23</p>
-                    <p className="text-xs text-muted-foreground">vezes</p>
+                    <p className="text-sm font-medium text-muted-foreground mb-2">Giro Receitas</p>
+                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                      23<span className="text-lg ml-1">vezes</span>
+                    </p>
                   </div>
 
                   {/* NCG Estimada */}
-                  <div className="bg-background/50 p-4 rounded-lg border border-border/30">
-                    <div className="flex items-center gap-2 mb-2">
-                      <DollarSign className="h-4 w-4 text-green-600" />
-                      <p className="text-xs text-muted-foreground">NCG Estimada</p>
+                  <div className="p-6 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 border border-border/50 hover:shadow-md transition-all">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 flex items-center justify-center border border-border/50">
+                        <DollarSign className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+                      </div>
                     </div>
-                    <p className="text-2xl font-bold text-foreground">R$ 50.000,00</p>
+                    <p className="text-sm font-medium text-muted-foreground mb-2">NCG Estimada</p>
+                    <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">R$ 50.000,00</p>
                   </div>
 
                   {/* Rotatividade */}
-                  <div className="bg-background/50 p-4 rounded-lg border border-border/30">
-                    <div className="flex items-center gap-2 mb-2">
-                      <TrendingUp className="h-4 w-4 text-purple-600" />
-                      <p className="text-xs text-muted-foreground">Rotatividade</p>
+                  <div className="p-6 rounded-lg bg-purple-50 dark:bg-purple-950/30 border border-border/50 hover:shadow-md transition-all">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-10 h-10 rounded-lg bg-purple-50 dark:bg-purple-950/30 flex items-center justify-center border border-border/50">
+                        <Clock className="h-5 w-5 text-purple-600 dark:text-purple-400" />
+                      </div>
                     </div>
-                    <p className="text-2xl font-bold text-foreground">0.8</p>
-                    <p className="text-xs text-muted-foreground">vezes</p>
+                    <p className="text-sm font-medium text-muted-foreground mb-2">Rotatividade</p>
+                    <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                      0.8<span className="text-lg ml-1">vezes</span>
+                    </p>
                   </div>
 
                   {/* Cobertura de Juros */}
-                  <div className="bg-background/50 p-4 rounded-lg border border-border/30">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Flame className="h-4 w-4 text-orange-600" />
-                      <p className="text-xs text-muted-foreground">Cobertura de Juros</p>
+                  <div className="p-6 rounded-lg bg-orange-50 dark:bg-orange-950/30 border border-border/50 hover:shadow-md transition-all">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-10 h-10 rounded-lg bg-orange-50 dark:bg-orange-950/30 flex items-center justify-center border border-border/50">
+                        <Flame className="h-5 w-5 text-orange-600 dark:text-orange-400" />
+                      </div>
                     </div>
-                    <p className="text-2xl font-bold text-foreground">5.0</p>
-                    <p className="text-xs text-muted-foreground">vezes</p>
+                    <p className="text-sm font-medium text-muted-foreground mb-2">Cobertura de Juros</p>
+                    <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                      5.0<span className="text-lg ml-1">vezes</span>
+                    </p>
                   </div>
-                </div>
 
-                {/* Receita por Funcionário */}
-                <div className="pt-4 border-t border-border/50">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Users className="h-4 w-4 text-indigo-600" />
-                    <p className="text-sm text-muted-foreground">Receita por Funcionário</p>
+                  {/* Receita por Funcionário */}
+                  <div className="p-6 rounded-lg bg-indigo-50 dark:bg-indigo-950/30 border border-border/50 hover:shadow-md transition-all">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-10 h-10 rounded-lg bg-indigo-50 dark:bg-indigo-950/30 flex items-center justify-center border border-border/50">
+                        <Users className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+                      </div>
+                    </div>
+                    <p className="text-sm font-medium text-muted-foreground mb-2">Receita por Funcionário</p>
+                    <p className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">R$ 20.000,00</p>
                   </div>
-                  <p className="text-3xl font-bold text-foreground">R$ 20.000,00</p>
                 </div>
               </div>
             </CardContent>
