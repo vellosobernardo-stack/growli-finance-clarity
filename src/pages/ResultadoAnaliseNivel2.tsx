@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, TrendingUp, DollarSign, Clock, Users, TrendingDown, Flame, FileText } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ResultadoAnaliseNivel2 = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="min-h-screen bg-gradient-hero">
       {/* Header */}
@@ -259,7 +261,10 @@ const ResultadoAnaliseNivel2 = () => {
                   <p className="text-sm text-muted-foreground mb-6">
                     Clique e descubra oportunidades e projeções de receita que você ainda não viu. Assuma o controle do seu futuro! O Nível 3.0 traz previsões em 30, 60 e 90 dias com plano de ação personalizados.
                   </p>
-                  <Button className="shadow-elegant hover:shadow-medium transition-all">
+                  <Button 
+                    className="shadow-elegant hover:shadow-medium transition-all"
+                    onClick={() => navigate("/resultado-analise-nivel3")}
+                  >
                     Avançar para Nível 3
                   </Button>
                 </div>

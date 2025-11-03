@@ -8,6 +8,7 @@ import AnaliseFinanceira from "./pages/AnaliseFinanceira";
 import AnaliseIntermediaria from "./pages/AnaliseIntermediaria";
 import ResultadoAnalise from "./pages/ResultadoAnalise";
 import ResultadoAnaliseNivel2 from "./pages/ResultadoAnaliseNivel2";
+import ResultadoAnaliseNivel3 from "./pages/ResultadoAnaliseNivel3";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/analise-intermediaria" element={<AnaliseIntermediaria />} />
           <Route path="/resultado-analise" element={<ResultadoAnalise />} />
           <Route path="/resultado-analise-nivel2" element={<ResultadoAnaliseNivel2 />} />
+          <Route path="/resultado-analise-nivel3" element={<ResultadoAnaliseNivel3 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
