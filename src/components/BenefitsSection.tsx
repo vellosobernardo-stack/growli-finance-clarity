@@ -29,7 +29,7 @@ const BenefitsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            Por que escolher a Growli?
+            Por que escolher a Leme?
           </h2>
           <p className="text-xl text-muted-foreground">
             Transforme dados complexos em decisões inteligentes
