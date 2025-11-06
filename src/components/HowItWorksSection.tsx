@@ -3,10 +3,10 @@ import { Upload, Edit3, LineChart, Lightbulb } from "lucide-react";
 const HowItWorksSection = () => {
   const steps = [
     {
-      icon: Upload,
+      icon: Edit3,
       number: "1",
-      title: "Envie suas informações",
-      description: "Faça upload dos seus demonstrativos financeiros em PDF ou preencha manualmente dados básicos da sua empresa."
+      title: "Insira suas informações",
+      description: "Preencha os dados financeiros da sua empresa através de formulários simples e intuitivos."
     },
     {
       icon: LineChart,

@@ -34,9 +34,9 @@ const HeroSection = () => {
             <img src={lemeLogo} alt="Leme" className="h-24 sm:h-28 mb-6 drop-shadow-lg" />
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto rounded-full"></div>
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-foreground">Entenda as finanças da sua empresa</span>
-            <span className="block text-primary mt-3 text-6xl sm:text-7xl lg:text-8xl">sem complicação</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <span className="text-foreground block mb-2">Entenda as finanças da sua empresa</span>
+            <span className="block text-primary text-5xl sm:text-6xl lg:text-7xl">sem complicação</span>
           </h1>
           
           <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -47,7 +47,7 @@ const HeroSection = () => {
             <Link to="/analise-financeira">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-primary-foreground font-bold px-12 py-7 text-xl shadow-strong transition-all duration-300 hover:scale-105 hover:shadow-medium"
+                className="bg-gradient-to-r from-secondary to-secondary-light hover:from-secondary/90 hover:to-secondary-light/90 text-secondary-foreground font-bold px-12 py-7 text-xl shadow-strong transition-all duration-300 hover:scale-105 hover:shadow-medium"
               >
                 Começar análise gratuita
                 <ArrowRight className="ml-3 h-6 w-6" />
