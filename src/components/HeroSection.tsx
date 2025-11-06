@@ -1,50 +1,62 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import lemeLogo from "@/assets/leme-logo.svg";
+import lemeLogo from "@/assets/leme-logo.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Ocean-inspired decorative background elements */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `repeating-linear-gradient(90deg, hsl(207 64% 19%) 0px, transparent 1px, transparent 40px, hsl(207 64% 19%) 41px),
-                          repeating-linear-gradient(0deg, hsl(207 64% 19%) 0px, transparent 1px, transparent 40px, hsl(207 64% 19%) 41px)`
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      {/* Ocean water effect background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#e8f4f8] via-[#d4e9f0] to-[#c8e4ed]"></div>
+      
+      {/* Animated water ripple effect */}
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: `radial-gradient(circle at 20% 50%, rgba(17, 45, 78, 0.1) 0%, transparent 50%),
+                          radial-gradient(circle at 80% 80%, rgba(26, 69, 120, 0.15) 0%, transparent 50%),
+                          radial-gradient(circle at 40% 20%, rgba(17, 45, 78, 0.1) 0%, transparent 50%)`,
+        animation: 'wave 8s ease-in-out infinite'
       }}></div>
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }}></div>
-      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary-light/5 rounded-full blur-2xl"></div>
+      
+      {/* Light caustics effect */}
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 70px)`,
+        animation: 'shimmer 6s linear infinite'
+      }}></div>
+      
+      {/* Floating elements */}
+      <div className="absolute top-20 right-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s' }}></div>
+      <div className="absolute bottom-20 left-10 w-80 h-80 bg-secondary/25 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '7s' }}></div>
+      <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-primary/15 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '6s' }}></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <div className="mb-8 flex flex-col items-center">
-            <img src={lemeLogo} alt="Leme" className="h-16 sm:h-20 mb-4" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-2">Leme</h2>
-            <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+          <div className="mb-10 flex flex-col items-center animate-fade-in">
+            <img src={lemeLogo} alt="Leme" className="h-24 sm:h-28 mb-6 drop-shadow-lg" />
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto rounded-full"></div>
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Entenda as finanças da sua empresa
-            <span className="block text-primary mt-2">sem complicação</span>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <span className="text-foreground">Entenda as finanças da sua empresa</span>
+            <span className="block text-primary mt-3 text-6xl sm:text-7xl lg:text-8xl">sem complicação</span>
           </h1>
           
           <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
             Análises financeiras automáticas, cenários de desempenho e estratégias práticas para o crescimento do seu negócio.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link to="/analise-financeira">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg shadow-strong transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-primary-foreground font-bold px-12 py-7 text-xl shadow-strong transition-all duration-300 hover:scale-105 hover:shadow-medium"
               >
                 Começar análise gratuita
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
             </Link>
             <Button 
               size="lg" 
               variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary/5 font-semibold px-8 py-6 text-lg transition-all duration-300"
+              className="border-2 border-primary bg-white/50 backdrop-blur-sm text-primary hover:bg-primary hover:text-white font-bold px-12 py-7 text-xl transition-all duration-300 hover:scale-105 shadow-soft"
             >
               Ver como funciona
             </Button>

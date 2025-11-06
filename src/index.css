@@ -132,4 +132,14 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+  
+  @keyframes wave {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.05); }
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
 }
