@@ -49,7 +49,7 @@ const HeroSection = () => {
                 size="lg" 
                 className="bg-gradient-to-r from-secondary to-secondary-light hover:from-secondary/90 hover:to-secondary-light/90 text-secondary-foreground font-bold px-12 py-7 text-xl shadow-strong transition-all duration-300 hover:scale-105 hover:shadow-medium"
               >
-                Começar análise gratuita
+                Começar análise
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
             </Link>

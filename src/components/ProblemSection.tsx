@@ -26,7 +26,7 @@ const ProblemSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
             Você não está sozinho nessa
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Milhares de empreendedores enfrentam os mesmos desafios financeiros todos os dias
           </p>
         </div>
@@ -35,13 +35,13 @@ const ProblemSection = () => {
           {problems.map((problem, index) => (
             <div 
               key={index}
-              className="bg-card p-8 rounded-lg shadow-soft hover:shadow-medium transition-all duration-300 animate-scale-in border border-border"
+              className="bg-card p-8 rounded-lg shadow-soft hover:shadow-medium transition-all duration-300 animate-scale-in border border-border flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
                 <problem.icon className="h-7 w-7 text-secondary" />
               </div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-3">
+              <h3 className="text-xl font-semibold text-card-foreground mb-3 min-h-[56px] flex items-center">
                 {problem.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

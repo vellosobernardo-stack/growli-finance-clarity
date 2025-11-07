@@ -29,7 +29,7 @@ const HowItWorksSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
             Como funciona a Leme?
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Transformamos dados financeiros complexos em insights práticos em apenas 3 passos
           </p>
         </div>
@@ -55,7 +55,7 @@ const HowItWorksSection = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-semibold text-foreground mb-4">
+                  <h3 className="text-2xl font-semibold text-foreground mb-4 min-h-[64px] flex items-center justify-center">
                     {step.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
