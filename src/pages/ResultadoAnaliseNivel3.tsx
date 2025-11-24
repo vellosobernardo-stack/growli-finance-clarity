@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, TrendingUp, TrendingDown, Clock, Download, RefreshCw, Target, AlertCircle, CheckCircle } from "lucide-react";
+import { ArrowLeft, TrendingUp, TrendingDown, Clock, Download, RefreshCw, Target, AlertCircle, CheckCircle, LayoutDashboard } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
@@ -250,6 +250,14 @@ const ResultadoAnaliseNivel3 = () => {
                 >
                   <Download className="w-5 h-5" />
                   Baixar Relatório PDF
+                </Button>
+                <Button 
+                  size="lg" 
+                  className="gap-2 bg-white text-primary hover:bg-white/90 shadow-elegant hover:shadow-medium transition-all"
+                  onClick={() => navigate("/minhas-analises")}
+                >
+                  <LayoutDashboard className="w-5 h-5" />
+                  Ir para Meu Dashboard
                 </Button>
                 <Button 
                   size="lg" 
